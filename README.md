@@ -1,91 +1,68 @@
-# 👨‍💼 Employee Management System
+# 🧑‍💼 Employee Management System (Java Swing + JDBC + MySQL)
 
-A simple and efficient **desktop-based application** built using **Core Java** with a **Swing GUI**. It provides basic yet powerful functionality to manage employee records using **JDBC** and **MySQL**.
+A simple yet functional desktop-based Employee Management System built using **Core Java**, **Java Swing** for the GUI, **JDBC** for database connectivity, and **MySQL** for persistent data storage.
 
-> ✅ Add • 🔁 Update • ❌ Delete • 📋 View Employees  
-> 🎯 Built with Java from scratch – no frameworks
-
----
-
-## 🖥️ Tech Stack
-
-- **Language:** Java (JDK 17 or compatible)
-- **UI:** Java Swing (AWT-based GUI)
-- **Database:** MySQL
-- **Connectivity:** JDBC (Java Database Connectivity)
-- **IDE:** NetBeans / IntelliJ / Eclipse (Your choice)
+This application supports full CRUD (Create, Read, Update, Delete) operations for managing employee records in an organization.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 📌 Add new employees with details like Name, Email, Salary, etc.
-- 📝 Update existing employee records
-- ❌ Delete employees by ID
-- 🔎 View all employee data in a table/grid
-- 📁 Persistent storage with MySQL
-- 🔐 Secure DB connectivity with JDBC
+- 👤 Add New Employees
+- 🛠️ Update Employee Details
+- ❌ Delete Employees
+- 🔍 View All Employees
+- 🖥️ Desktop UI built with Java Swing
+- 🗄️ Database Integration using JDBC and MySQL
 
 ---
 
-## 📂 Project Structure
+## 🧱 Project Structure
 
- plaintext
+```plaintext
 /EmployeeManagement/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com.yourname.ems/
-│   │   │   │   ├── Main.java
-│   │   │   │   ├── Employee.java
-│   │   │   │   ├── EmployeeDAO.java
-│   │   │   │   └── EmployeeForm.java
+│   └── com/
+│       └── mayank/
+│           ├── Main.java
+│           ├── Employee.java
+│           ├── EmployeeDAO.java
+│           └── EmployeeForm.java
 ├── db/
-│   └── employee_db.sql   # DB creation script
-└── README.md
+│   └── employee_db.sql   # SQL script to create and initialize the employee table
+├── README.md
+└── .gitignore
 
+⚙️ Tech Stack
 
-🏁 Getting Started
-📥 1. Clone the Repository
+| Technology | Description                   |
+| ---------- | ----------------------------- |
+| Java       | Core Logic                    |
+| Swing      | GUI / Frontend                |
+| JDBC       | Database connectivity         |
+| MySQL      | Relational Database           |
+| NetBeans   | Development Environment (IDE) |
 
+🛠️ Setup Instructions
+1. 🧬 Clone the Repository
 https://github.com/mayank06-T/Employee-Management-System
 
-🛠 2. Setup the Database
+2. ⚙️ Configure MySQL
+Create a MySQL database named employee_db
 
-Open MySQL Workbench or terminal
+Run the SQL script inside /db/employee_db.sql to create the employees table
 
-Run the script located in /db/employee_db.sql
-
-CREATE DATABASE employee_db;
-
-USE employee_db;
-
-CREATE TABLE employee (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    salary DOUBLE
-);
-
-🧩 3. Update JDBC Configuration
-Open the Java class where JDBC connection is defined (e.g., EmployeeDAO.java) and edit:
+3. 🔐 Set DB Credentials
+Update your DB credentials in the Java code (typically in EmployeeDAO.java):
 
 String url = "jdbc:mysql://localhost:3306/employee_db";
-String username = "your_mysql_username";
+String user = "your_mysql_username";
 String password = "your_mysql_password";
 
-▶️ 4. Run the Application
-
-Open the project in your preferred IDE (e.g., NetBeans or IntelliJ)
-
-Compile and run Main.java
-
-Start managing employee records 🎯
-
-🙋‍♂️ Author
-👨‍💻 Mayank Tiwari
-📌 Java Developer | Backend & Desktop Applications
-🌐 GitHub
 
 
+4. ▶️ Run the App
+Open project in NetBeans or IntelliJ
+
+Run Main.java
 
